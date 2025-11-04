@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdf6f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* 🌙 Dark mode */
+body.dark-mode {
+  background-color: #1e1e2e;
+  color: #f1f1f1;
+}
+
+header {
+  background-color: #ffc8dd;
+  color: #4a4a4a;
+  padding: 20px;
+  border-bottom: 3px solid #ffafcc;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin-top: 40px;
+  color: #ff6f91;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+  align-items: start;
+}
+
+/* 🔹 Shared Grid Layout */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.1);
+  overflow: hidden;
+  width: 180px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #ff4d6d;
+}
+
+.card button {
+  background-color: #ffafcc;
+  border: none;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background-color: #ff6f91;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(255, 105, 180, 0.2);
+}
+
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #ffd6e0;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffb6c1;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: #ff6f91;
+}
+
+.loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: #ff6f91;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.search-bar {
+  padding: 10px 20px;
+  width: 60%;
+  max-width: 400px;
+  border: 2px solid #ffafcc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.search-bar:focus {
+  border-color: #ff6f91;
+}
+
+.planner-bucket-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;  
+  margin-top: 10px;            /* spacing between Planner and Bucket List */
+}
+
+.pink-btn {
+  background-color: #ff69b4; /* hot pink */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.pink-btn:hover {
+  background-color: #ff85c1; /* lighter pink on hover */
+  transform: scale(1.05);
+}
+
+/* 🔹 Shared grid style for both sections */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.pink-btn {
+  background-color: #f78fb3;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 6px 12px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.pink-btn:hover {
+  background-color: #f8a5c2;
+}
+
+
+/* 🌍 Horizontal scrolling for country sections */
+#popularCountries,
+#randomCountries,
+#popularLocations,
+#randomLocations {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-behavior: smooth;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#popularCountries::-webkit-scrollbar,
+#randomCountries::-webkit-scrollbar,
+#popularLocations::-webkit-scrollbar,
+#randomLocations::-webkit-scrollbar {
+  height: 8px;
+}
+
+#popularCountries::-webkit-scrollbar-thumb,
+#randomCountries::-webkit-scrollbar-thumb,
+#popularLocations::-webkit-scrollbar-thumb,
+#randomLocations::-webkit-scrollbar-thumb {
+  background: #ffafcc;
+  border-radius: 10px;
+}

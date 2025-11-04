@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌸 My Pink Bucket List 🌸</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff0f5; /* light pink background */
+  color: #333;
+}
+
+header {
+  background-color: #ffb6c1; /* pink header */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  color: white;
+  font-weight: 600;
+}
+
+.delete-country {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-country:hover {
+    background-color: #ff1a5c;
+}
+
+#backHome {
+    background-color: #ff69b4;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    transition: background 0.3s;
+}
+
+#backHome:hover {
+    background-color: #ff6f91;
+}
+
+
+/* Form Section */
+.form-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.form-section select,
+.form-section input {
+  padding: 10px;
+  border-radius: 25px;
+  border: 2px solid #ffb6c1;
+  min-width: 150px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-section select:focus,
+.form-section input:focus {
+  border-color: #ff69b4;
+  box-shadow: 0 0 6px rgba(255,105,180,0.5);
+}
+
+.form-section button {
+  padding: 10px 20px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.form-section button:hover {
+  background-color: #ff85c1;
+}
+
+/* Bucket List */
+.bucket-list .country-section {
+  margin: 15px auto;
+  padding: 15px;
+  background-color: #fff0f5; /* lighter pink cards */
+  border-radius: 15px;
+  max-width: 600px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.bucket-list .country-section h2 {
+  color: #ff4d6d;
+  font-size: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.bucket-list .country-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bucket-list .country-section li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background-color: #ffe6f0; /* soft pink */
+  margin-bottom: 6px;
+}
+
+.bucket-list .country-section li label {
+  flex-grow: 1;
+  margin-left: 8px;
+}
+
+.bucket-list .delete-location {
+  background-color: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.bucket-list .delete-location:hover {
+  background-color: #ff1a5c;
+}
+
+.empty-state {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌸 My Bucket List 🌸</h1>
+    <button id="backHome">Home</button>
+  </header>
+
+  <main>
+    <!-- Add Location Form -->
+    <div class="form-section">
+      <select id="countrySelect">
+        <option value="">Select Country</option>
+      </select>
+
+      <input type="text" id="newLocation" placeholder="Enter a new location">
+      <button id="addLocationBtn">Add Location</button>
+    </div>
+
+    <!-- Bucket List Display -->
+    <div id="bucketList" class="bucket-list">
+      <!-- Countries and locations will appear here -->
+    </div>
+  </main>
+
+  <script src="bucketlist.js"></script>
+  <script>
+    document.getElementById("addLocationBtn").addEventListener("click", addCustomLocation);
+  </script>
+</body>
+</html>
+
