@@ -103,7 +103,7 @@ The API provides:
 
 ---
 
-## 💾 CRUD Implementation
+## CRUD Implementation
 
 Although the application does not use a database, CRUD functionality is implemented using the browser's **Local Storage**.
 
@@ -136,13 +136,13 @@ Users can remove countries from:
   <img width="734" height="333" alt="image" src="https://github.com/user-attachments/assets/9dcfccd6-5308-41af-a1ff-6e645282280d" />
 
 - Planner
-  <img width="726" height="367" alt="image" src="https://github.com/user-attachments/assets/61955dcf-1a5c-4ac4-a9a9-bdd797c35680" />
+  <img width="733" height="367" alt="image" src="https://github.com/user-attachments/assets/61955dcf-1a5c-4ac4-a9a9-bdd797c35680" />
 
 - Bucket List
-  <img width="704" height="354" alt="image" src="https://github.com/user-attachments/assets/07a47a46-f36f-4838-8854-01654e553bda" />
+  <img width="733" height="354" alt="image" src="https://github.com/user-attachments/assets/07a47a46-f36f-4838-8854-01654e553bda" />
 
 
-## 🎯 Learning Outcomes
+## Learning Outcomes
 
 This project demonstrates:
 
@@ -165,6 +165,6 @@ Diploma in Computer Science
 
 ---
 
-## 📄 License
+## License
 
 This project was developed for educational purposes.
